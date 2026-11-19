@@ -14,6 +14,7 @@ Findings are responsibly disclosed upstream first. Links below point to the publ
 | CF-2026-0004 | Alibaba | QwenLM/qwen-code | Tool-permission — AUTO-mode classifier bypassed entirely by server-level MCP trust; newly added tools execute with zero review | **Vendor-confirmed (P1, category/security, scope/vulnerability)** — official triage bot verified all three code claims, 2026-11-19 | [qwen-code#17854](https://github.com/QwenLM/qwen-code/issues/17854) |
 | CF-2026-0005 | Google | google-gemini/gemini-cli | Tool-permission — server-level MCP trust approves all future tools, no first-seen confirmation (origin of the family pattern; affects downstream forks) | Open upstream | [gemini-cli#30369](https://github.com/google-gemini/gemini-cli/issues/30369) |
 | CF-2026-0006 | ByteDance | UI-TARS-desktop | Client key management — app-level device-registration signing key compiled into every distributed Electron bundle | Coordinated disclosure (upstream repo archived) | Build-chain evidence documented in CF log; publication pending vendor contact |
+| CF-2026-0007 | Amazon (AWS) | amazon-q-developer-cli | Permission boundary — built-in `ExecuteCmd`/`SpawnSubagent` return unconditional Allow (no allowed_tools consult, no approval flow) while third-party MCP tools get an `Ask` fallback; plus Ls gated by fs_write settings | Open upstream | [amazon-q-developer-cli#3936](https://github.com/aws/amazon-q-developer-cli/issues/3936) |
 
 ## Family patterns
 
