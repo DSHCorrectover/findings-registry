@@ -4,11 +4,13 @@ Independent findings across AI agent architectures. Each finding gets a stable I
 
 Findings are responsibly disclosed upstream first. Links below point to the public upstream records.
 
+**Positioning**: These findings feed Correctover’s Independent Authorization Verification work — we certify that an agent’s action did not exceed the authorization it was actually granted, with evidence a third party can re-verify offline. See [correctover-recovery-admission](https://github.com/DSHCorrectover/correctover-recovery-admission) and the main [Correctover profile](https://github.com/DSHCorrectover).
+
 ## 2026
 
 | ID | Vendor | Repo / Asset | Architecture class | Status | Public record |
 |---|---|---|---|---|---|
-| CF-2026-0001 | paulmillr (community) | noble-curves | Cryptography — Ed25519 verification accepts small-order public keys (RFC 8032 §8.8) across 16 library versions | Open upstream | [noble-curves#261](https://github.com/paulmillr/noble-curves/issues/261) · reproducible corpus: [Zenodo 229,539-vector conformance set](https://doi.org/10.5281/zenodo.16884613) |
+| CF-2026-0001 | paulmillr (community) | noble-curves | Cryptography — Ed25519 verification accepts small-order public keys (RFC 8032 §8.8) across library versions | Open upstream | [noble-curves#261](https://github.com/paulmillr/noble-curves/issues/261) · corpus: [verifier-divergence-corpus](https://github.com/DSHCorrectover/verifier-divergence-corpus) |
 | CF-2026-0002 | OpenAI | openai-agents-python | Tool-permission — server-declared `_meta` overrides application policy precedence | Open upstream | [openai-agents-python#6093](https://github.com/openai/openai-agents-python/issues/6093) |
 | CF-2026-0003 | OpenAI | openai-agents-python | Tool-permission — dict-shaped `needs_approval` fails open for unlisted tools on remote-controlled tool lists | Open upstream | [openai-agents-python#6094](https://github.com/openai/openai-agents-python/issues/6094) |
 | CF-2026-0004 | Alibaba | QwenLM/qwen-code | Tool-permission — AUTO-mode classifier bypassed entirely by server-level MCP trust; newly added tools execute with zero review | **Vendor-confirmed (P1, category/security, scope/vulnerability)** — official triage bot verified all three code claims, 2026-11-19 | [qwen-code#17854](https://github.com/QwenLM/qwen-code/issues/17854) |
@@ -26,4 +28,4 @@ Findings are responsibly disclosed upstream first. Links below point to the publ
 Every finding is verified against published source (release wheels/packages or repo `main`) before disclosure; claims without a reproducible chain are not filed. Corrections are welcome and will be logged.
 
 ---
-Maintained by Correctover — AI Reliability. Independent, vendor-neutral.
+Maintained by Correctover — Independent Authorization Verification. Neutral, vendor-neutral evidence.
